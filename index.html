@@ -1,10 +1,193 @@
-<body style="
-  background: #976de1;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  font-size: 200px;
-  ">
-  🧄
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Garlic App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A restaurant reviewing & recommendations app for your friend group" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧄</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <style>
+
+    .jetbrains-mono-666 {
+        font-family: "JetBrains Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+    }
+
+    @keyframes phone-hover {
+        from { bottom: 0; }
+        to { bottom: 5%; }
+    }
+    @keyframes shadow-hover {
+        from { opacity: 0.3; transform: scale(1); }
+        to { opacity: 0.1; transform: scale(1.2); }
+    }
+
+    html {
+        background: linear-gradient(180deg,rgba(0,0,0,1) 70%, rgba(18,253,98,1) 70%), black;
+        color: white;
+        height: 100%;
+        text-align: center;
+
+        font-family: "JetBrains Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    body {
+        position: relative;
+        padding: 85px;
+    }
+
+    .hero {
+        position: fixed;
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;
+        bottom: 10%;
+        height: 650px;
+    }
+
+    .text {
+        width: 90%;
+        position: absolute;
+        bottom: 40%;
+        margin-left: -45%;
+        left: 50%;
+    }
+
+    .phone {
+        bottom: 0%;
+        position: absolute;
+        width: 267px;
+        margin-left: -133.5px;
+        animation: 5s infinite alternate ease-in-out phone-hover;
+    }
+
+    .shadow {
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        margin-left: -133.5px;
+        width: 267px;
+        height: 30px;
+        background: black;
+        opacity: 0.3;
+        border-radius: 50%;
+        animation: 5s infinite alternate ease-in-out shadow-hover;
+    }
+
+    .cta {
+        background: yellow;
+        padding: 20px 32px;
+        border: 2px solid black;
+        border-radius: 666px;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+        z-index: 420;
+        position: fixed;
+        opacity: 0.5;
+    }
+    .cta:hover { opacity: 1 }
+
+    a.link {
+        position: fixed;
+        padding: 25px;
+        color: rgba(18,253,98,1);
+        text-decoration: none;
+    }
+    a.link:hover {
+        text-decoration: yellow wavy underline;
+    }
+
+    a.privacy { top: 0; left: 0 }
+    a.contact { top: 0; right: 0 }
+    a.copyright { bottom: 0; right: 0; color: black }
+    a.terms { bottom: 0; left: 0; color: black }
+
+    @media screen and (max-width: 600px) {
+        body { padding: 70px 10px; }
+        h1 { font-size: 22px; }
+        h3 { font-size: 15px; }
+
+        .phone, .shadow {
+            width: 200px;
+            margin-left: -100px;
+        }
+
+        a.contact { transform: rotate(90deg) translate(22%, -40%); }
+        a.copyright { transform: rotate(180deg); }
+        a.terms { transform: rotate(270deg) translate(36%, -113%); }
+        
+        .cta {
+            position: static;
+            opacity: 1;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>A restaurant reviewing & recommendations app for your friend group</h1>
+  <h3>Cuz no one cares what strangers think</h3>
+
+  <div class="hero">
+    <img class="text" src="./garlic.svg" alt="">
+    <img class="phone" src="./phone.png" alt="">
+    <div class="shadow"></div>
+  </div>
+
+  <a class="cta" id="cta" target="_blank" href="./">DOWNLOAD ON THE APP STORE</a>
+
+  <a class="link privacy" href="">PRIVACY POLICY</a>
+  <a class="link contact" href="">CONTACT</a>
+  <a class="link copyright" href="">COPYRIGHT 2014 © IllIllIll, llC</a>
+  <a class="link terms" href="">CONDITIONS & TERMS</a>
+  
 </body>
+
+<script type="text/javascript">
+    var divName = 'cta'; // div that is to follow the mouse (must be position:absolute)
+    var offsetX = document.getElementById(divName).clientWidth/-2;
+    var offsetY = document.getElementById(divName).clientHeight/-2;
+    var leftPadding = 100;
+    var rightPadding = leftPadding + document.getElementById(divName).clientWidth;
+    var verticalPadding = 100;
+    
+    function mouseX(e) {if (!e) e = window.event; if (e.pageX) return e.pageX; else if (e.clientX)return e.clientX + (document.documentElement.scrollLeft ?  document.documentElement.scrollLeft : document.body.scrollLeft); else return 0;}
+    function mouseY(e) {if (!e) e = window.event; if (e.pageY) return e.pageY; else if (e.clientY)return e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop); else return 0;}
+    
+    function follow(e) {
+        var obj = document.getElementById(divName).style;
+
+        boundX = mouseX(e)+offsetX;
+        boundY = mouseY(e)+offsetY;
+
+        // Keep within horizontal bounds
+        if (boundX < leftPadding) { boundX = leftPadding }
+        else if (boundX > (window.innerWidth - rightPadding)) { boundX = window.innerWidth - rightPadding }
+
+        // Keep within vertical bounds
+        if (boundY < verticalPadding) { boundY = verticalPadding }
+        else if (boundY > (window.innerHeight - verticalPadding + offsetY)) { boundY = window.innerHeight - verticalPadding + offsetY }
+
+
+        obj.left = boundX + 'px';
+        obj.top = boundY + 'px'; 
+        }
+    document.onmousemove = follow;
+  </script>
+
+</html>
