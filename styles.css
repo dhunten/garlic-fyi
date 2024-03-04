@@ -28,7 +28,7 @@ body {
     margin: 0;
     min-height: 100%;
     width: 100%;
-    background: linear-gradient(180deg,rgb(0,0,0) 70%, rgb(18,253,98) 70%), black;
+    background: linear-gradient(180deg,rgb(0,0,0) 50%, rgb(18,253,98) 50%), black;
 }
 
 h1 {
@@ -39,21 +39,22 @@ h1 {
     background: linear-gradient(180deg,rgb(0,0,0) 70%, rgb(18,253,98) 70%), black;
     width: 100%;
     height: 650px;
-    max-height: 100vmin
+    max-height: 100vmin;
+    position: relative;
 }
 
 .text {
     width: 90%;
     position: absolute;
-    bottom: 30%;
+    bottom: 35%;
     margin-left: -45%;
     left: 50%;
 }
 
 .head {
     position: absolute;
-    right: 18%;
-    bottom: 25%;
+    right: 10%;
+    bottom: 32%;
     width: 100px;
 }
 
