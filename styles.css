@@ -28,7 +28,7 @@ body {
     margin: 0;
     min-height: 100%;
     width: 100%;
-    background: linear-gradient(180deg,rgb(0,0,0) 50%, rgb(18,253,98) 50%), black;
+    background: linear-gradient(180deg,rgb(0,0,0) 60%, rgb(18,253,98) 60%);
 }
 
 h1 {
@@ -36,7 +36,7 @@ h1 {
 }
 
 .hero {
-    background: linear-gradient(180deg,rgb(0,0,0) 70%, rgb(18,253,98) 70%), black;
+    background: linear-gradient(180deg,rgb(0,0,0) 70%, rgb(18,253,98) 70%);
     width: 100%;
     height: 650px;
     max-height: 100vmin;
