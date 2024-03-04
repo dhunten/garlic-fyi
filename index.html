@@ -53,13 +53,8 @@
 
     .hero {
         background: linear-gradient(180deg,rgba(0,0,0,1) 70%, rgba(18,253,98,1) 70%), black;
-        /* position: fixed; */
         width: 100%;
-        /* left: 50%; */
-        /* margin-left: -50%; */
-        /* bottom: 10%; */
         height: 650px;
-        /* max-width: 100vmin; */
         max-height: 100vmin
     }
 
@@ -71,11 +66,16 @@
         left: 50%;
     }
 
+    .head {
+        position: absolute;
+        right: 18%;
+        bottom: 25%;
+        width: 100px;
+    }
+
     .phone {
-        /* bottom: 0%; */
         position: relative;
         width: 267px;
-        /* margin-left: -133.5px; */
         animation: 5s infinite alternate ease-in-out phone-hover;
     }
 
@@ -122,8 +122,6 @@
     a.terms { bottom: 0; left: 0; color: black }
 
     @media (max-aspect-ratio: 9/16) {
-    /* @media screen and (max-width: 600px) { */
-        /* body { padding: 70px 10px; } */
         h1 { font-size: 22px; }
         h3 { font-size: 15px; }
 
@@ -140,6 +138,11 @@
             display: inline-block;
             margin-top: 20px;
         }
+
+        .head {
+            right: 8%;
+            width: 70px;
+        }
     }
 
     @media (min-aspect-ratio: 4/3) {
@@ -155,8 +158,9 @@
   <a class="cta" id="cta" target="_blank" href="./">DOWNLOAD ON THE APP STORE</a>
 
   <div class="hero">
-    <img class="text" src="./garlic.svg" alt="">
-    <img class="phone" src="./phone.png" alt="">
+    <img class="text" src="./garlic.svg" alt="GARLIC">
+    <img class="head" src="./head.gif" alt="🤪">
+    <img class="phone" src="./phone.png" alt="screenshot of app">
     <div class="shadow"></div>
   </div>
 
@@ -169,7 +173,7 @@
 </body>
 
 <script type="text/javascript">
-    var divName = 'cta'; // div that is to follow the mouse (must be position:absolute)
+    var divName = 'cta';
     var offsetX = document.getElementById(divName).clientWidth/-2;
     var offsetY = document.getElementById(divName).clientHeight/-2;
     var leftPadding = 100;
