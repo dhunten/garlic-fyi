@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Garlic App</title>
+  <title>Garlic: App For Food & Friends</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="A restaurant reviewing & recommendations app for your friend group" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧄</text></svg>">
@@ -21,12 +21,12 @@
     }
 
     @keyframes phone-hover {
-        from { bottom: 0; }
-        to { bottom: 5%; }
+        from { bottom: -5%; }
+        to { bottom: -10%; }
     }
     @keyframes shadow-hover {
-        from { opacity: 0.3; transform: scale(1); }
-        to { opacity: 0.1; transform: scale(1.2); }
+        from { opacity: 0.1; transform: scale(1.2); }
+        to { opacity: 0.3; transform: scale(1); }
     }
 
     html {
@@ -43,39 +43,46 @@
 
     body {
         position: relative;
-        padding: 85px;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        padding: 85px 20px 0;
     }
 
     .hero {
-        position: fixed;
+        background: linear-gradient(180deg,rgba(0,0,0,1) 70%, rgba(18,253,98,1) 70%), black;
+        /* position: fixed; */
         width: 100%;
-        left: 50%;
-        margin-left: -50%;
-        bottom: 10%;
+        /* left: 50%; */
+        /* margin-left: -50%; */
+        /* bottom: 10%; */
         height: 650px;
+        /* max-width: 100vmin; */
+        max-height: 100vmin
     }
 
     .text {
         width: 90%;
         position: absolute;
-        bottom: 40%;
+        bottom: 30%;
         margin-left: -45%;
         left: 50%;
     }
 
     .phone {
-        bottom: 0%;
-        position: absolute;
+        /* bottom: 0%; */
+        position: relative;
         width: 267px;
-        margin-left: -133.5px;
+        /* margin-left: -133.5px; */
         animation: 5s infinite alternate ease-in-out phone-hover;
     }
 
     .shadow {
         position: absolute;
-        bottom: -5%;
         left: 50%;
-        margin-left: -133.5px;
+        margin: 60px 0 0 -133.5px;
         width: 267px;
         height: 30px;
         background: black;
@@ -114,15 +121,14 @@
     a.copyright { bottom: 0; right: 0; color: black }
     a.terms { bottom: 0; left: 0; color: black }
 
-    @media screen and (max-width: 600px) {
-        body { padding: 70px 10px; }
+    @media (max-aspect-ratio: 9/16) {
+    /* @media screen and (max-width: 600px) { */
+        /* body { padding: 70px 10px; } */
         h1 { font-size: 22px; }
         h3 { font-size: 15px; }
 
-        .phone, .shadow {
-            width: 200px;
-            margin-left: -100px;
-        }
+        .phone, .shadow { width: 200px; }
+        .shadow { margin-left: -100px; }
 
         a.contact { transform: rotate(90deg) translate(22%, -40%); }
         a.copyright { transform: rotate(180deg); }
@@ -135,6 +141,10 @@
             margin-top: 20px;
         }
     }
+
+    @media (min-aspect-ratio: 4/3) {
+        .hero { margin-top: 100px; }
+    }
   </style>
 </head>
 
@@ -142,6 +152,7 @@
 
   <h1>A restaurant reviewing & recommendations app for your friend group</h1>
   <h3>Cuz no one cares what strangers think</h3>
+  <a class="cta" id="cta" target="_blank" href="./">DOWNLOAD ON THE APP STORE</a>
 
   <div class="hero">
     <img class="text" src="./garlic.svg" alt="">
@@ -149,12 +160,11 @@
     <div class="shadow"></div>
   </div>
 
-  <a class="cta" id="cta" target="_blank" href="./">DOWNLOAD ON THE APP STORE</a>
 
-  <a class="link privacy" href="">PRIVACY POLICY</a>
-  <a class="link contact" href="">CONTACT</a>
-  <a class="link copyright" href="">COPYRIGHT 2014 © IllIllIll, llC</a>
-  <a class="link terms" href="">CONDITIONS & TERMS</a>
+  <a class="link privacy" href="./privacy">PRIVACY POLICY</a>
+  <a class="link contact" href="mailto:support@garlic.fyi">CONTACT</a>
+  <a class="link copyright" >©2024 IllIllIll, llC</a>
+  <a class="link terms" href="./terms">CONDITIONS & TERMS</a>
   
 </body>
 
