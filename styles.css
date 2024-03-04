@@ -152,3 +152,5 @@ a:hover {
 .legal a.link {
     color: rgba(18,253,98,1);
 }
+
+.terms a.terms { transform: rotate(270deg) translate(10%, -20%); }
