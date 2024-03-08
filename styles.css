@@ -41,6 +41,7 @@ h1 {
     height: 650px;
     max-height: 100vmin;
     position: relative;
+    margin-top: 5%;
 }
 
 .text {
