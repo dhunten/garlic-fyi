@@ -1,0 +1,39 @@
+{
+  "name": "Garlic: App For Food & Friends",
+  "short_name": "Garlic",
+  "description": "A restaurant reviewing & recommendations app for your friend group",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#12fd62",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.garlictime.garlicbreath",
+      "url": "https://play.google.com/store/apps/details?id=com.garlictime.garlicbreath"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
+
