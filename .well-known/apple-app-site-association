@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "RRZ85F7D9U.com.garlictime.garlicbreath"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all routes"
+          }
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "RRZ85F7D9U.com.garlictime.garlicbreath"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "RRZ85F7D9U.com.garlictime.garlicbreath"
+    ]
+  }
+}
