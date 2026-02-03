@@ -1,0 +1,15 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.garlictime.garlicbreath",
+            "sha256_cert_fingerprints": [
+                "9E:78:64:3B:F3:37:71:5B:23:77:47:32:11:93:01:4E:77:64:8D:FD:38:25:F1:03:68:3F:F0:6B:C9:81:2C:06",
+                "D1:3F:A2:C8:16:5B:68:9B:CB:65:CE:E9:33:FC:52:72:9A:C7:2E:FB:01:F2:C2:6D:77:87:A7:A2:15:09:19:B5"
+            ]
+        }
+    }
+]
